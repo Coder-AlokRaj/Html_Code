@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p>welcome to html blog</p>
+
+
+    <style>
+        #circle{
+            width:50px;
+            height:50px;
+            background-color: yellow;
+
+        }
+
+        *{
+            margin:10px;
+            padding:0px;
+
+        }
+    </style>
+</head>
+<body>
+    <h6>HELLO ALOK HOW ARE YOU</h6>
+    <!-- ctr+/  to comment any line -->
+    <p id="desc" onmousedown="mouseDown()" onmouseup="mouseUp()">
+        New Cars
+        Are you planning on buying a new car? Well, we know that with so many options available out there, it gets really difficult to find a good car which suits your need. Hence, we have put together a complete list of new cars. Maruti Suzuki, Hyundai and Tata are the 3 most popular car brands. The 5 most popular cars are Hyundai Exter, Maruti Suzuki Fronx, Mahindra Scorpio, Hyundai Grand i10 Nios and Mahindra Thar. The 5 most popular upcoming cars are Mahindra Thar.e, Audi Q8 e-tron, Audi Q8 e-tron Sportback, Mahindra Scorpio-N pick up and Volvo C40 Recharge.
+        
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1600376190114-7ab29e101c28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" width=420px alt="erroe connection">
+    <br>
+    this is a new mode car
+    which is designed by BMW
+    MANUFACTURES.It emit
+    <p><u>CO<sub>2</sub></u></p>
+    
+    <br>
+    
+    <a href="https://unsplash.com/s/photos/wallper"target="_main">click to see the new wallper
+       
+    </a>
+
+    <br>
+
+    <a href="https://github.com/Coder-AlokRaj/Real-Time-Chat-Application"target="_main">
+        <img src="PASSPORT PHOTO_ALOK_RAJ_20BCS4883.jpeg"width=320px alt="alok github website">
+    </a>
+
+
+    <br>
+
+    <a href="" id="demo1"onclick="newcar()">
+       
+      <button> click to visit new car store
+        </button>
+
+       
+    </a>
+    <br>
+    <div>
+        <input type="text" onpresskey="keypress()">
+        <p id="keys"></p>
+    </div>
+    
+
+
+    <div id="circle">
+        Thank you!
+
+    </div>
+
+    <div  class="main">
+        <div>
+            <label >Your Name</label>
+            <input type="text"name=""id="ice" placeholder="enter your name">
+            <br>
+            <br>
+            <label>Choose an ice cream flavour
+                <br>
+                <br>
+                <select id="ice-cream" onchange="fun()">
+                    <option value="">select one</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Vanilaa">Vanilaa</option>
+                    <option value="Strawberry">Strawberry</option>
+                    
+                </select>
+
+            </label>
+            
+            <div id="res"></div>
+        </div>
+
+    </div>
+
+    <div id="main">
+        <div>
+            <p>Want to know the name of Developer of this page </p>
+            <p id="showname"></p>
+            
+            <button id="btn">click me</button>
+            <button id="wait">wait</button>
+            
+        </div>
+
+    </div>
+
+
+
+
+    <div id="major">
+        <div>
+            <p>paly watch game </p>
+            <p id="show"></p>
+            
+            <button id="btn1">click here</button>
+            <button id="wait1">click to stop</button>
+            
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+
+        //1st way of using function
+        const newcar=()=>{
+          // window.open("https://www.cardekho.com/car-collection",'blank').onfocus();  
+        }
+
+       // 2nd way of using the function
+
+        const car=document.getElementById("demo1");
+        car.onclick=function()
+        {
+            window.open("https://www.cardekho.com/car-collection",'blank').onfocus(); 
+        }
+
+
+        //third way  of using the function
+
+        // const car2=document.querySelector("#demo1");
+        // car2.addEventListener('click',()=>{
+        //     alert("this the third way to use the function");
+        // })
+
+
+        const fun=()=>{
+            const cream=document.getElementById("ice").value;
+           const icecream=document.getElementById("ice-cream").value;
+
+
+            const result=document.getElementById("res");
+            result.innerHTML=`MR ${cream} select ${icecream} ice cream flavour`;
+
+        }
+
+
+
+        function mouseDown()
+        {
+            document.getElementById("desc").style.color="red"
+
+        }
+        function mouseUp()
+        {
+            document.getElementById("desc").style.color="blue";
+        }
+
+        const change=document.getElementById("circle");
+
+        change.addEventListener('mouseenter',()=>{
+            change.style.backgroundColor="pink";
+        });
+
+        change.addEventListener('mouseleave',()=>{
+            change.style.backgroundColor="brown";
+        });
+
+
+        const keypress=()=>{
+            const val=document.getElementById("keys").innerHTML=`you pressed $(event.key)` ;
+
+        }
+
+       //settimeout  theory
+
+            const name2=document.querySelector("#showname");
+            const btn=document.querySelector("#btn");
+            const wait1=document.querySelector('#wait');
+
+            let timeref;
+
+            const show=()=>{
+                name2.innerHTML="Loading wait......";
+               timeref= setTimeout(()=>{
+                    name2.innerHTML="ALOK RAJ";
+                },1000)
+
+                
+            }
+
+            btn.addEventListener('click',show);
+            wait1.addEventListener('click',()=>{
+                clearTimeout(timeref);
+            })
+
+
+            //cleartimeout and setinterval
+
+            const name3=document.querySelector("#show");
+            const btn1=document.querySelector("#btn1");
+            const wait=document.querySelector('#wait1');
+
+            let time;
+            let num=0;
+
+            const showme=()=>{
+                name3.innerHTML="Loading wait......";
+               time= setInterval(()=>{
+                    name3.innerHTML=`${num}`;
+                    num++;
+                },1000)
+
+                
+            }
+
+            btn1.addEventListener('click',showme);
+            wait.addEventListener('click',()=>{
+                clearTimeout(time);
+            });
+
+
+            
+
+        
+        
+            
+    
+
+    </script>
+    
+</body>
+</html>

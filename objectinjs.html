@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+let biodata={
+            myname:"alok raj",
+            myage:21,
+            getdata(){
+                console.log(`my name :${biodata.myname} and my age is:${biodata.myage}`);
+            }
+        }
+
+        biodata.getdata();
+
+
+
+        let biodata2={
+            myname:{
+                realname:"alok raj",
+                channelname:"youtubeshorts",
+            },
+            myage:21,
+            getdata(){
+               // console.log(`my name :${biodata.myname} and my age is:${biodata.myage}`);
+                console.log(biodata2.myname.channelname);
+            }
+        }
+        biodata2.getdata();
+
+
+
+        //this object
+
+        //1st example
+        var name="raj";
+        function myname(){
+            console.log(this.name);
+        }
+        myname();
+
+
+//2nd example
+
+const obj={
+     channel:"cricket",
+     id:121,
+
+     getdata()
+     {
+        console.log(this.id);
+     }
+}
+
+obj.getdata();
+
+      
+    </script>
+        
+    
+</body>
+</html>

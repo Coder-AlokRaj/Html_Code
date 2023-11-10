@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        *{
+            margin:7px;
+            padding:0;
+
+        }
+
+        .conatiner{
+            border:2px solid blue;
+            margin:3px
+        }
+
+        .text-success{
+            color:green;
+        }
+
+        button{
+        cursor:pointer;
+    }
+
+    </style>
+
+   
+
+</head>
+<body>
+
+    
+    <marquee behavior="scroll" direction="right" scrollamount="12">WELCOME TO TOURSIT REGISTRATION</marquee>
+    <br>
+
+    <button  onclick="goback()">
+        Go Back -Registration cancel
+    </button>
+
+    <div id="main">
+     <h1>fill this information wisely</h1>
+    </div>
+
+    <button onclick ="rule()">
+        RULE
+    </button>
+
+
+    <h1 style="color:burlywood">STUDENT DETAILS</h1>
+    <div>
+        <form action="form.php">
+            <input type="text" placeholder="enter your name">
+            <p>select your section</p>
+            <label for ="sectiona">
+                <input type="radio" value="sec"name="section" id="sectiona">Section A
+            </label>
+            <label for="sectionb">
+                <input type="radio"value="sect"name="section" id="sectionb">Section B
+            </label>
+            <br>
+            <p>do you like food</p>
+            <label for="canteen">
+                <input type="checkbox" value="food"name="cant"id="canteen">Maggi
+            </label>
+
+            <label for="canteen2">
+                <input type="checkbox" value="food"name="cant2"id="canteen2">pasta
+            </label>
+            <br>
+            <p>your address</p>
+            
+            <textarea cols="30"rows="5" name="add" id="address"placeholder="enter your home address"></textarea>
+
+            <select name="travel"id="car">
+                <option value="no car">select your car</option>
+                <option value="audi">AUDI</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="BMW">BMW</option>
+            </select>
+            
+
+        </form>
+        <br>
+<hr width="'50%"  color="red"/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Qipxi1Qn8iE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <audio src="https___bestringtones.net_music_Apna Bana Le Ringtone - Arijit Singh, Bhediya.mp3"controls></audio>
+    <br>
+    
+
+    <input type="text"name="raj"id=tourist placeholder="Enter your name"/>
+    <button onclick ="greet()">
+        CLICK 
+    </button>
+    <br>
+
+    <div class="end">
+        
+
+    </div>
+    <br>
+
+    <div class="main_div">
+
+        <ol>
+
+            <div class="first"><li>delhi</li></div>
+            <div class="second"><li>mumbai</li></div>
+            <div class="third"><li>bihar</li></div>
+    
+            </ol>
+       
+        <button onclick="place()">
+          
+        </button>
+        
+    </div>
+    <div id="tour">
+
+    
+    
+    
+    </div>
+    
+</body>
+<script input type="text/javascript">
+  //  alert("click ok to open tourist online form ");
+    console.log("its working");
+   // confirm("click ok to login in  tourist website");
+
+
+    
+
+    // var x=document.getElementById("main").innerHTML;
+    // console.log(x);
+
+    // var x=document.getElementById("main").innerHTML="<h1>Carefully fill this form :</h1>";
+    // console.log(x);
+
+
+    function rule(){
+        document.getElementById("main").innerHTML="fill the form carefully ,Once filled can't be deleted";
+
+    }
+
+
+
+
+    function greet(){
+        var x=document.getElementById("tourist").value;
+        //alert(x);
+        var str="congratulation you have completed your registration process ";
+        var z=str+x;
+        //alert(z);
+
+        let result=document.getElementsByClassName("end")[0].innerHTML=z;
+        result[0].classList.add("text-success");
+    }
+
+    function goback(){
+            window.history.back();
+        }
+
+
+        function place(){
+
+
+             document.getElementsByClassName('first');
+          
+
+
+            window.open("https://www.bing.com/search?pglt=41&q=delhi+tourist+places&cvid=2e9e135e756a4723a3a5c44d9a268984&aqs=edge.0.0j69i57j0l7.5050j0j1&FORM=ANAB01&PC=ASTS", '_blank').focus();
+
+            //   OR
+
+            //window.location="https://www.bing.com/search?pglt=41&q=delhi+tourist+places&//cvid=2e9e135e756a4723a3a5c44d9a268984&aqs=edge.0.0j69i57j0l7.5050j0j1&FORM=ANAB01&PC=ASTS"
+            
+            
+        }
+
+        
+
+    
+
+    let last="<br>"+"thank you!"
+
+    document.write(last);
+
+
+</script>
+
+</html>

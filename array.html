@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+</body>
+<script>
+    var car=["audi","BMW","i20","mercedes"];
+    car.forEach(collection);
+
+    function collection(item,index,array)
+    {
+       // document.write(item +"<br>");
+        car[index]= item+'121<br>';
+
+
+    }
+    car.forEach(display);
+
+    function display (item,index,array)
+    {
+        document.write(item);
+    }
+
+</script>
+</html>
